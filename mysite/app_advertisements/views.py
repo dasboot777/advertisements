@@ -20,6 +20,9 @@ def login(request):
 def profile(request):
     return render(request, 'profile.html')
 
+def indexhtml(request):
+    return render(request, 'index.html')
+
 
 
 
