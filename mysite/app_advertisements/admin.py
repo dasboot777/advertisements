@@ -3,12 +3,12 @@ from .models import Advertisement
 
 # Register your models here.
 class AdvertisementAdmin(admin.ModelAdmin):
-    list_display = ["id", "title", "price", "is_auction", "created_at", "updated_at", ]
+    list_display = ["id", "title", "price", "is_auction", "created_at", "updated_at", "user", "image"]
     actions = ['make_auction_as_true', 'make_auction_as_false']
     list_filter = ["id", "title", "price", "is_auction", "created_at", "updated_at"]
 
     fieldsets = (
-        ('Общее', {'fields': ('title', 'description'), 'classes': ['collapse']}),
+        ('Общее', {'fields': ('title', 'description', 'user', 'image'), 'classes': ['collapse']}),
         ('Финансы', {'fields': ('price', 'is_auction'), 'classes': ['collapse']})
     )
     @admin.action(description="Сделать торг уместным")
