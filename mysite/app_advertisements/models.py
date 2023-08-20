@@ -10,7 +10,7 @@ User = get_user_model()
 
 # Create your models here.
 class Advertisement(models.Model):
-    id = models.CharField("id", max_length=64, primary_key=True)
+    # id = models.CharField("id", max_length=64, primary_key=True)
     title = models.CharField("заголовок", max_length=64)
     description = models.TextField("описание")
     price = models.DecimalField("цена", max_digits=10, decimal_places=2)
